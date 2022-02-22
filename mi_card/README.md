@@ -10,6 +10,7 @@ stf +TAB
 ```
 - How to use Containers to lay out your UI  
     Container는 가능한한 가장 큰 공간을 가지려하고, child가 생기면 해당 child에 맞게 크기가 정해진다.   SizedBox는 Container와 기능은 같지만 높이와 너비를 지정할 수 있는 위젯이다  
+    패딩을 정할 때 TRBL을 지정할 수도 있고, 수평과 수직을 EdgeInsets.symmetric(horizontal: 10.0)로 설정 할 수도 있다
 
 - How to use Columns and Rows to position your UI elements  
     mainAxisAlignment와 crossAxisAlignment를 통해 아이템을 정렬한다  
