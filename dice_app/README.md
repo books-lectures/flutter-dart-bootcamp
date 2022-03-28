@@ -1,4 +1,4 @@
-- Buttons  
+# Buttons  
 
 ### Deprecated
 ~~FlatButton, RaisedButton, OutlineButton~~
