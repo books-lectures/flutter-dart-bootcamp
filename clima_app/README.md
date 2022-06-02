@@ -1,23 +1,45 @@
-- 폰트설정  
+
+## 폰트설정  
 ```dart
 // pubspec.yaml
-
   fonts:
-  - family: Spartan MB
+  - family: Pretendard
     fonts:
-    - asset: fonts/SpartanMB-Black.otf
-      weight: 900
+      - asset: assets/fonts/Pretendard-Regular.ttf
+        weight: 400
+      - asset: assets/fonts/Pretendard-Medium.ttf
+        weight: 500
+      - asset: assets/fonts/Pretendard-SemiBold.ttf
+        weight: 600
+      - asset: assets/fonts/Pretendard-Bold.ttf
+        weight: 700
+        
+// main.dart
+return MaterialApp(
+      home: MyHome(),
+      theme: ThemeData(
+        fontFamily: 'Pretendard',
+        textTheme: TextTheme(
+            // bodyText2가 기본 텍스트 스타일로 적용됨
+            bodyText2: TextStyle(color: Colors.yellow.shade800),
+        ),
+      ),
+    );
 ```
-- Theme  
+## Theme  
     MaterialApp의 Theme속성은 앱의 전체적인 스타일링을 설정할 수 있다  
     Theme.of 메서드는 정적 메서드이다  
     가장 가까운 BuildContext에서 명시되어있는 ThemeData의 값을 찾아서 반환  
 ![img](./imgs/material_app_theme_data.png)
+
 ```dart
 // Custom theme
 return MaterialApp(
       home: MyHome(),
       theme: ThemeData(
+        fontFamily: 'Pretendard',
+        brightness: Brightness.dark,
+        highlightColor: Colors.yellow,
         primaryColor: Colors.red,
         accentColor: Colors.purple,
         textTheme: TextTheme(
